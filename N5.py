@@ -10,8 +10,19 @@ def fibonacchi(num):
         return fibonacchi(num + 2) - fibonacchi(num + 1)
 
 
+def numInput(message):
+    is_ok = True
+    while is_ok:
+        try:
+            number = int(input(f"{message}"))
+            is_ok = False
+        except ValueError:
+            print("Чето не то написал. Давай ещё раз.")
+    return
+
+
 list = []
-number = 8
+number = numInput("Введите число: ")
 
 for i in range(-number, number + 1):
     list.append(fibonacchi(i))
