@@ -18,7 +18,7 @@ def numInput(message):
             is_ok = False
         except ValueError:
             print("Чето не то написал. Давай ещё раз.")
-    return
+    return number
 
 
 list = []
